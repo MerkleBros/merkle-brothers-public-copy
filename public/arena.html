@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hello World</title>
+  <link rel="stylesheet" href="stylesheets/arena.css" rel="stylesheet">  
+</head>
+<body>
+	<template id="fighterTemplate">
+		<div class="fighterImage">
+			<img v-bind:src="'images/owned/framed/' + fighter.cardPrototypeId + '.jpg'"/>
+		</div>
+	</template>
+    <div class="nav-top">
+      <div class="nav-element nav-title"><a href="/">Merkle Bros Trading Card Game</a></div>
+      <div class="nav-element"><a href="/my-collection">My Collection</a></div>
+      <div class="nav-element"><a href="/auction-house">Auction House</a></div>
+      <div class="nav-element""><a href="/buy-packs">Buy Packs</a></div>
+      <div class="nav-element">Arena</div>
+      <div class="nav-element" id="active-link"><a href="/about">About</a></div>
+      <div class="nav-element" id="web3LoginButton"><a href="#">Login</a></div>
+    </div>
+	<div id="app">
+		<div id="game-container" v-if="gameInitiated">
+			<div id="board">
+				<div id="lane-one">
+					<div id="lane-one-opponent">
+						<fighter-item
+							v-for="fighter in getEnemyFightersByLane(0)"
+							v-bind:fighter="fighter"
+							v-bind:class="{enemyFighterSelected: fighter.isSelected}"
+							@click.native="selectFighter(fighter)">
+						</fighter-item>	
+					</div>
+					<div id="lane-one-friendly">
+						<fighter-item
+							v-for="fighter in getFriendlyFightersByLane(0)"
+							v-bind:fighter="fighter"
+							v-bind:class="{friendlyFighterSelected: fighter.isSelected}"
+							@click.native="selectFighter(fighter)">
+						</fighter-item>
+					</div>		
+				</div>
+				<div id="lane-two">
+					<div id="lane-two-opponent">
+						<fighter-item
+							v-for="fighter in getEnemyFightersByLane(1)"
+							v-bind:fighter="fighter"
+							v-bind:class="{enemyFighterSelected: fighter.isSelected}"
+							@click.native="selectFighter(fighter)">
+						</fighter-item>		
+					</div>
+					<div id="lane-two-friendly">
+						<fighter-item
+							v-for="fighter in getFriendlyFightersByLane(1)"
+							v-bind:fighter="fighter"
+							v-bind:class="{friendlyFighterSelected: fighter.isSelected}"
+							@click.native="selectFighter(fighter)">
+						</fighter-item>
+					</div>
+				</div>
+				<div id="lane-three">
+					<div id="lane-three-opponent">
+						<fighter-item
+							v-for="fighter in getEnemyFightersByLane(2)"
+							v-bind:fighter="fighter"
+							v-bind:class="{enemyFighterSelected: fighter.isSelected}"
+							@click.native="selectFighter(fighter)">
+						</fighter-item>		
+					</div>
+					<div id="lane-three-friendly">
+						<fighter-item
+							v-for="fighter in getFriendlyFightersByLane(2)"
+							v-bind:fighter="fighter"
+							v-bind:class="{friendlyFighterSelected: fighter.isSelected}"
+							@click.native="selectFighter(fighter)">
+						</fighter-item>
+					</div>		
+				</div>
+			</div>
+			<div id="state">
+				<div v-bind:class="{active: me.active}">{{me.active ? 'YOUR TURN' : 'not your turn'}}</div>
+				<div v-on:click="select($event)">Player Number: {{playerNumber}}</div>
+				<button onclick="sendRequestState()">requestState</button>
+				<button v-on:keyup.enter="endTurn" v-on:click="endTurn">endturn</button>
+				<div>
+					<h1>HAND</h1>
+					<ol>
+					    <card-item
+					      v-for="card in me.hand"
+					      v-bind:card="card"
+					      @click.native="selectCard(card)">
+					    </card-item>				
+					</ol>
+					<div>Selected card: {{selectedCard}}</div>
+				</div>
+				<div>
+					<h1>FRIENDLY DEPLOYED</h1>
+					<select v-model="selectedFighter">
+					    <option v-for="fighter in me.deployed" v-bind:value="fighter">
+					      {{fighter}}
+					    </option>
+					</select>				
+					<ol>
+						<fighter-item
+							v-for="fighter in me.deployed"
+							v-bind:fighter="fighter"
+							@click.native="selectFighter(fighter)">
+						</fighter-item>
+					</ol>
+					<span>Selected fighter: {{ selectedFighter }}</span>
+					<button onclick="move()">move</button>
+					<button onclick="attack()">attack</button>
+				</div>
+				<div>
+					<h1>STATE</h1>
+					<div>GAMEID: {{state.id}}</div>
+					<div>activePlayer: {{state.activePlayer}}</div>
+					<div>turn: {{state.turn}}</div>
+					<div>Me: {{me}}</div>
+					<div>My health: {{me.health}}</div>
+					<div>My dev: {{me.dev}}</div>
+					<div>My max dev: {{me.maxDev}}</div>
+					<div>My hand: {{me.hand}}</div>
+					<div>My deployed: {{me.deployed}}</div>
+				</div>
+				<div>
+					<select v-model="selectedCard">
+					    <option v-for="card in me.hand" v-bind:value="card">
+					      {{card}}
+					    </option>
+					</select>
+					<span>Selected: {{ selectedCard }}</span>
+					<div v-if="selectedCard.id !== 0">
+						<form>
+							<p>Action One (#{{state.cardPrototypes[selectedCard.id].actionOne}}) - {{state.cardPrototypes[selectedCard.id].actionOneString}} - Value:  {{state.cardPrototypes[selectedCard.id].actionOneValue}}</p>
+							<input v-model="cardComm.prep.actionOne.target" type="text" placeholder="action one target string">
+							<input v-model="cardComm.prep.actionOne.id" type="text" placeholder="action one id array">
+							<p>Action One (#{{state.cardPrototypes[selectedCard.id].actionTwo}}) - {{state.cardPrototypes[selectedCard.id].actionTwoString}} - Value:  {{state.cardPrototypes[selectedCard.id].actionTwoValue}}</p>
+							<input v-model="cardComm.prep.actionTwo.target" type="text" placeholder="action two target string">
+							<input v-model="cardComm.prep.actionTwo.id" type="text" placeholder="action two id array">
+							<p>Action One (#{{state.cardPrototypes[selectedCard.id].actionThree}}) - {{state.cardPrototypes[selectedCard.id].actionThreeString}} - Value:  {{state.cardPrototypes[selectedCard.id].actionThreeValue}}</p>
+							<input v-model="cardComm.prep.actionThree.target" type="text" placeholder="action three target string">
+							<input v-model="cardComm.prep.actionThree.id" type="text" placeholder="action three id array">
+							<br>
+							<input type="radio" id="zero" value="0" v-model="cardComm.lane">
+							<label for="zero">Zero</label>
+							<br>
+							<input type="radio" id="one" value="1" v-model="cardComm.lane">
+							<label for="one">One</label>
+							<br>
+							<input type="radio" id="zero" value="2" v-model="cardComm.lane">
+							<label for="two">Two</label>
+							<br>
+						</form>
+						<button onclick="playCard()">playCard</button>
+					</div>
+					<div>{{constructedCardComm}}</div>
+				</div>
+			</div>
+			<!-- <footer class="footer">THIS IS A FOOTER</footer> -->
+		</div>
+	</div>
+</body>
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- <script src="javascripts/pixi.min.js"></script> -->
+<script src="./javascripts/login.js"></script>
+<!-- /socket.io/socket.io.js works in dev but must replace with actual file locations in production -->
+<script src="/socket.io/socket.io.js"></script>
+<script src='./javascripts/arena.js'></script>
+</html>

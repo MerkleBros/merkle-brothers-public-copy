@@ -1,0 +1,224 @@
+_id.int32(),cardTitle.string(),cardArtist.string(),cardSet.int32(),rarity.int32(),actionPointCost.int32(),attackValue.int32(),healthValue.int32(),actionOne.int32(),actionTwo.int32(),actionThree.int32(),actionOneValue.int32(),actionTwoValue.int32(),actionThreeValue.int32(),flavorText.string()
+1,Founder's Totem,Dani Leoni,0,0,1,0,0,0,0,0,0,0,0,"People would kill for what I've got."
+2,Founder's Totem,Hanna Hetmanchuk,0,0,2,0,0,0,0,0,0,0,0,The Ethereal Crisis began with a destructive storm of Ethereum crystals.
+3,Founder's Totem,Hanna Hetmanchuk,0,0,3,0,0,0,0,0,0,0,0,A tranquil wood dotted with Ethereum crystals.
+4,Capital Library,Andrew Dubravushkin,1,1,5,0,0,2,0,0,3,0,0,"All of the world's knowledge. The hard part is understanding it."
+5,Ancient Coins,Andrew Dubravushkin,1,1,4,0,0,3,0,0,1,0,0,Bits of coin. They're not much now. Used to buy empires though.
+6,Dark Experiments,Andrew Dubravushkin,1,1,2,0,0,4,5,2,1,3,1,Death doesn't stop curiosity.
+7,Flight of Knowledge,Andrew Dubravushkin,1,1,7,0,0,6,0,0,1,0,0,The library attracted many unwanted visitors.
+8,Library Spiderlings,Andrew Dubravushkin,1,1,3,1,2,7,8,0,1,3,0,The spiderlings preyed on those who would trespass in the library.
+9,Ethereum Crystals,Andrew Dubravushkin,1,1,4,0,0,9,8,0,1,7,0,Crystal shards from the plains of Ethereum.
+10,Ethereal Spellbook,Andrew Dubravushkin,1,1,5,0,0,2,6,0,1,1,0,Sometimes to understand is to read beyond the words.
+11,Little Merkle Tree,Andrew Dubravushkin,1,1,3,0,0,10,11,0,1,3,0,This is a small Merkle Tree. Legend says that these trees make up the backbone of our Universe.
+12,Library Guardian,Andrew Dubravushkin,1,1,7,5,6,5,2,0,3,1,0,Searching for knowledge has its risks.
+13,Master Librarian,Andrew Dubravushkin,1,1,9,5,8,3,0,0,2,0,0,Keeper of the ancient texts.
+14,Library Totem,Andrew Dubravushkin,0,0,1,0,0,0,0,0,0,0,0,The keeper had been a fixture of the library since time immemorial.
+15,Capital Library,Andrew Dubravushkin,2,2,5,0,0,2,0,0,3,0,0,How many kingdoms pillaged? All for a few books.
+16,Ancient Coins,Andrew Dubravushkin,2,2,4,0,0,3,0,0,1,0,0,The first currencies used by the ancient races. 
+17,Dark Experiments,Andrew Dubravushkin,2,2,2,0,0,4,5,2,1,3,1,Dark secrets often require dark sacrifices.
+18,Flight of Knowledge,Andrew Dubravushkin,2,2,7,0,0,6,0,0,1,0,0,A single text might feed a family for generations.
+19,Library Spiderlings,Andrew Dubravushkin,2,2,3,1,2,7,8,0,1,3,0,The spiderlings were loyal friends to the undead scholars.
+20,Ethereum Crystals,Andrew Dubravushkin,2,2,4,0,0,9,8,0,1,7,0,Still brimming with power after all these millenia.
+21,Ethereal Spellbook,Andrew Dubravushkin,2,2,5,0,0,2,6,0,1,1,0,Secrets learned and forgotten. This is the fate of all knowledge.
+22,Little Merkle Tree,Andrew Dubravushkin,2,2,3,0,0,10,11,0,1,3,0,Tracing the ever-linking branches allows for divination of the past and the future.
+23,Library Guardian,Andrew Dubravushkin,2,2,7,5,6,5,2,0,3,1,0,An ancient statue brought to life with ethereal energy.
+24,Master Librarian,Andrew Dubravushkin,2,2,9,5,8,3,0,0,2,0,0,The librarian has served his post at least since the invention of writing.
+25,Library Totem,Andrew Dubravushkin,0,0,2,0,0,0,0,0,0,0,0,"As many arms as books. As many eyes as man."
+26,Capital Library,Andrew Dubravushkin,3,3,5,0,0,2,0,0,3,0,0,"""One might spend a lifetime on one text. I know I have.""-Matthias the Learned"
+27,Ancient Coins,Andrew Dubravushkin,3,3,4,0,0,3,0,0,1,0,0,The ancient coins came in many denominations like silver and gold.
+28,Dark Experiments,Andrew Dubravushkin,3,3,2,0,0,4,5,2,1,3,1,"All things through the study of Ethereum."
+29,Flight of Knowledge,Andrew Dubravushkin,3,3,7,0,0,6,0,0,1,0,0,A single text might curse a family for generations.
+30,Library Spiderlings,Andrew Dubravushkin,3,3,3,1,2,7,8,0,1,3,0,"The venom takes days to kill."
+31,Ethereum Crystals,Andrew Dubravushkin,3,3,4,0,0,9,8,0,1,7,0,How many souls have been trapped within?
+32,Ethereal Spellbook,Andrew Dubravushkin,3,3,5,0,0,2,6,0,1,1,0,How many lives had been sacrificed for this one page?
+33,Little Merkle Tree,Andrew Dubravushkin,3,3,3,0,0,10,11,0,1,3,0,Most empires have schools dedicated to the divinations of the Merkle Trees.
+34,Library Guardian,Andrew Dubravushkin,3,3,7,5,6,5,2,0,3,1,0,The creature was made from the same ancient stone as the library itself.
+35,Master Librarian,Andrew Dubravushkin,3,3,9,5,8,3,0,0,2,0,0,All attempts to interfere with the librarian have been met with deadly response.
+36,Library Totem,Andrew Dubravushkin,0,0,3,0,0,0,0,0,0,0,0,A statue used for ceremonial offerings to the god of Knowledge and Preservation.
+37,Sketchy Library,Andrew Dubravushkin,4,2,5,0,0,2,0,0,3,0,0,"""I rarely get to read for pleasure anymore.""- anonymous librarian"
+38,Sketchy Coins,Andrew Dubravushkin,4,2,4,0,0,3,0,0,1,0,0,"We as a community should move away from coins like these."
+39,Sketchy Experiments I,Andrew Dubravushkin,4,2,2,0,0,4,5,2,1,3,1,This experiment killed everyone involved.
+40,Sketchy Theft I,Andrew Dubravushkin,4,2,7,0,0,6,0,0,1,0,0,"""We have a 97% retention rate.""-Ekhart the statistician"
+41,Sketchy Spiderlings I,Andrew Dubravushkin,4,2,3,1,2,7,8,0,1,3,0,"They're also used for transportation."
+42,Sketchy Crystals,Andrew Dubravushkin,4,2,4,0,0,9,8,0,1,7,0,"""To the moon!""-ancient proverb"
+43,Sketchy Spellbook,Andrew Dubravushkin,4,2,5,0,0,2,6,0,1,1,0,"""These ancient fonts are all just scribbles to me.""-Erpy the librarian"
+44,Sketchy Little Tree,Andrew Dubravushkin,4,2,3,0,0,10,11,0,1,3,0,"""Maybe in our world there lives a happy little tree over there""-Bob Ross"
+45,Sketchy Guardian,Andrew Dubravushkin,4,2,7,5,6,5,2,0,3,1,0,"We know from ancient records that his name is Mortimer."
+46,Sketchy Librarian,Andrew Dubravushkin,4,2,9,5,8,3,0,0,2,0,0,"The ancient peoples called him 'orac zibl', meaning 'abnormally armed.'"
+47,Sketchy Experiments II,Andrew Dubravushkin,4,2,2,0,0,4,5,2,1,3,1,"Did you try turning it off and on again?"
+48,Sketchy Theft II,Andrew Dubravushkin,4,2,7,0,0,6,0,0,1,0,0,"""Steal from the rich, give to the rich.""-Library Thief, A Memoir"
+49,Sketchy Spiderlings II,Andrew Dubravushkin,4,2,3,1,2,7,8,0,1,3,0,"They've crawled the whole library, so they're a pretty good search engine."
+50,Sketchy Library Totem,Andrew Dubravushkin,0,0,2,0,0,0,0,0,0,0,0,"What's the point of all that knowledge without some application?"
+51,Dionaea Muscipula,Daria Oss,5,1,2,1,1,4,0,0,1,0,0,Happy's monster drawings are adored by collectors. Not so much by adventurers.
+52,Ethereal Illustration,Daria Oss,5,1,2,0,0,12,9,0,1,1,0,Cursed crystals drawn in Happy's signature style.
+53,Baby Merkle Tree,Daria Oss,5,1,3,1,1,13,0,0,1,0,0,A newly grown Merkle Tree.
+54,Amanita,Daria Oss,5,1,3,1,1,8,14,0,5,1,0,A poisonous mushroom drawn in a friendly style.
+55,Merkle Illustration,Daria Oss,5,1,2,0,0,10,15,0,1,1,0,Merkle Trees are common in Happy's Forest.
+56,Doll's Eyes,Daria Oss,5,1,2,1,1,8,16,0,3,3,0,White Baneberry, one of Happy's favorite poisons.
+57,Anthurium Andraeanum,Daria Oss,5,1,3,2,1,11,0,0,1,0,0,A leaf used for filtering noxious swamp gases.
+58,Castor Bean,Daria Oss,5,1,5,0,0,8,17,0,10,1,0,A harmless looking bean used to produce ricin, Happy the Herbalist's favorite poison. 
+59,Happy Shelf,Daria Oss,5,1,3,0,0,8,11,0,2,4,0,Happy's things. Or at least how Happy imagines her things.
+60,Happy Ingredients,Daria Oss,5,1,7,0,0,11,0,0,9,0,0,A table full of ingredients for a helpful Happy potion.
+61,Father Nature,Daria Oss,0,0,1,0,0,0,0,0,0,0,0,"He called out from the trees. The words were branches and blades."
+62,Dionaea Muscipula,Daria Oss,6,2,2,1,1,4,0,0,1,0,0,"They're not so happy looking when they're eating your livestock."
+63,Ethereal Illustration,Daria Oss,6,2,2,0,0,12,9,0,1,1,0,Ethereum crystals can build and burn empires. Happy only drew the bad kind.
+64,Baby Merkle Tree,Daria Oss,6,2,3,1,1,13,0,0,1,0,0,Altering the limbs can subtly alter current events.
+65,Amanita,Daria Oss,6,2,3,1,1,8,14,0,5,1,0,Happy makes an excellent stew with these.
+66,Merkle Illustration,Daria Oss,6,2,2,0,0,10,15,0,1,1,0,Happy is a diviner of the ancient trees. She bends their branches to alter the fates of travelers.
+67,Doll's Eyes,Daria Oss,6,2,2,1,1,8,16,0,3,3,0,Happy preferred the eyes of real children.
+68,Anthurium Andraeanum,Daria Oss,6,2,3,2,1,11,0,0,1,0,0,One of the few surviving Happy illustrations featuring a non-deadly plant.
+69,Castor Bean,Daria Oss,6,2,5,0,0,8,17,0,10,1,0,A single thorn can kill an ox!
+70,Happy Shelf,Daria Oss,6,2,3,0,0,8,11,0,2,4,0,Happy keeps a very well organized shop
+71,Happy Ingredients,Daria Oss,6,2,7,0,0,11,0,0,9,0,0,Happy only brews the helpful potions for herself.
+72,Father Nature,Daria Oss,0,0,2,0,0,0,0,0,0,0,0,Happy made a horrible pact. She gave her soul to save her forest.
+73,Dionaea Muscipula,Daria Oss,7,3,2,1,1,4,0,0,1,0,0,Dionaea muscipula have been known to swallow small armies.
+74,Ethereal Illustration,Daria Oss,7,3,2,0,0,12,9,0,1,1,0,Happy offered the pretty crystals to local villagers.
+75,Baby Merkle Tree,Daria Oss,7,3,3,1,1,13,0,0,1,0,0,"Who could resist an offer to change one's past?"
+76,Amanita,Daria Oss,7,3,3,1,1,8,14,0,5,1,0,Amanita are best known for nibbling at traveler's ankles.
+77,Merkle Illustration,Daria Oss,7,3,2,0,0,10,15,0,1,1,0,Happy hangs the souls of lost travelers in her trees to light the forest at night.
+78,Doll's Eyes,Daria Oss,7,3,2,1,1,8,16,0,3,3,0,Doll's eyes are known for whispering insults at passersby.
+79,Anthurium Andraeanum,Daria Oss,7,3,3,2,1,11,0,0,1,0,0,Andraeanum leaves possess sufficient intelligence for writing above-average poetry.
+80,Castor Bean,Daria Oss,7,3,5,0,0,8,17,0,10,1,0,The thorny beans are often found rolling along the forest floor in search of prey.
+81,Happy Shelf,Daria Oss,7,3,3,0,0,8,11,0,2,4,0,Happy is very early to rise and enjoys watching sunrises.
+82,Happy Ingredients,Daria Oss,7,3,7,0,0,11,0,0,9,0,0,Happy was once a master potion maker before the corruption set in.
+83,Father Nature,Daria Oss,0,0,3,0,0,0,0,0,0,0,0,A wooden totem holding the essence of the forest. Happy's only friend.
+84,Happy Muscipula I,Daria Oss,8,2,2,1,1,4,0,0,1,0,0,In real life they have glowing mouths due to selective uptake of radioactive ground soil.
+85,Happy Crystals I,Daria Oss,8,2,2,0,0,12,9,0,1,1,0,"""They're an investment, really.""-US Government"
+86,Happy Little Tree I,Daria Oss,8,2,3,1,1,13,0,0,1,0,0,The banner of House Merkle
+87,Happy Amanita I,Daria Oss,8,2,3,1,1,8,14,0,5,1,0,Forest nymphs who fail their tribe are said to reincarnate as Amanita.
+88,Happy Merkle,Daria Oss,8,2,2,0,0,10,15,0,1,1,0,"""They don't look anything like this really.""- Skeleton King's Gardener"
+89,Happy Eyes I,Daria Oss,8,2,2,1,1,8,16,0,3,3,0,"If you knock them off they roll after you and call you names. It's hurtful."
+90,Happy Andraeanum I,Daria Oss,8,2,3,2,1,11,0,0,1,0,0,Unlike Doll's Eyes, andraeanum may offer words of advice to weary pilgrims.
+91,Happy Bean I,Daria Oss,8,2,5,0,0,8,17,0,10,1,0,"""Rice 'n beans?""-Jesse"
+92,Sketchy Shelf I,Daria Oss,8,2,3,0,0,8,11,0,2,4,0,That bag has an animal head in it.
+93,Sketchy Ingredients I,Daria Oss,8,2,7,0,0,11,0,0,9,0,0,Happy painted this still-life as a gift to a good friend.
+94,Happy Muscipula II,Daria Oss,8,2,2,1,1,4,0,0,1,0,0,Muscipula make gobbling sounds that are often mistaken for the calls of wild turkeys.
+95,Happy Crystals II,Daria Oss,8,2,2,0,0,12,9,0,1,1,0,"These seem pretty portable. Are they considered a light node?"
+96,Happy Little Tree II,Daria Oss,8,2,3,1,1,13,0,0,1,0,0,"""Draw me a data structure""-Patrick"
+97,Happy Amanita II,Daria Oss,8,2,3,1,1,8,14,0,5,1,0,"""The stew is really good trust me bro""-Happy"
+98,Happy Eyes II,Daria Oss,8,2,2,1,1,8,16,0,3,3,0,A local punishment involves being locked in a room with a bag of Doll's Eyes.
+99,Happy Andraeanum II,Daria Oss,8,2,3,2,1,11,0,0,1,0,0,"""Watch out for that crazy lady""-Anthurium Andraeanum"
+100,Happy Bean II,Daria Oss,8,2,5,0,0,8,17,0,10,1,0,They explode like poisonous grenades when thrown.
+101,Sketchy Shelf II,Daria Oss,8,2,3,0,0,8,11,0,2,4,0,Happy paints her nails every weekend with fresh animal blood.
+102,Sketchy Ingredients II,Daria Oss,8,2,7,0,0,11,0,0,9,0,0,Happy graduated from the Royal Arts Academy of Elias with a degree in Alchemy.
+103,Father Nature,Daria Oss,0,0,2,0,0,0,0,0,0,0,0,"""Always recycle!""-Moose Head"
+104,Wizards of Ethereum,Vladimir Gasai,9,1,6,2,2,6,8,18,2,4,1,Guardians of the ancient crystals.
+105,Necromancer Captain,Vladimir Gasai,9,1,6,4,3,8,6,0,10,1,0,"Show me your dead. I would speak with them."
+106,Ethereal Wastes I,Hanna Hetmanchuk,9,1,5,0,0,9,10,0,1,1,0,An ancient Ethereum crystal fallen to ground.
+107,Desert Fencer,Arb Paninken,9,1,4,3,1,19,0,0,1,0,0,A common infantryman of the Ethereal Wastes.
+108,Early Elias,Hanna Hetmanchuk,9,1,4,0,0,9,20,0,1,2,0,Even the great city of Elias was once a hamlet.
+109,Decentralization,Hanna Hetmanchuk,9,1,4,0,0,4,8,0,5,2,0,Fallen crystals are not always a boon to young empires.
+110,Clansman of Elias,Arb Paninken,9,1,5,7,4,11,0,0,2,0,0,A warrior from the frozen city of Elias.
+111,Battle Wizard,Arb Paninken,9,1,6,4,5,4,0,0,4,0,0,Outcast magicians can often find mercenary work. 
+112,Ethereal Wastes II,Hanna Hetmanchuk,9,1,5,0,0,21,0,0,5,0,0,Even nature can succumb to the power of fallen crystals.
+113,Ethereal Forest,Hanna Hetmanchuk,9,1,5,0,0,31,30,0,1,10,0,A tranquil wood dotted with Ethereum crystals.
+114,Totem of Elias,Andrew Dubravushkin,0,0,1,0,0,0,0,0,0,0,0,A small stone carving of the City of Elias.
+115,Wizards of Ethereum,Vladimir Gasai,10,2,6,2,2,6,8,18,2,4,1,"When we perish, the crystal will be yours. Not a day before."
+116,Necromancer Captain,Vladimir Gasai,10,2,6,4,3,8,6,0,10,1,0,He gives the gift of life. He gives of himself.
+117,Ethereal Wastes I,Hanna Hetmanchuk,10,2,5,0,0,9,10,0,1,1,0,"I was lost when I first laid eyes on the magnificent stone. Lost and mad and dying."
+118,Desert Fencer,Arb Paninken,10,2,4,3,1,19,0,0,1,0,0,"""My soldiers have agile hearts and agile minds.""-Lady of Wealth"
+119,Early Elias,Hanna Hetmanchuk,10,2,4,0,0,9,20,0,1,2,0,Early civilizations were often built around fallen crystals.
+120,Decentralization,Hanna Hetmanchuk,10,2,4,0,0,4,8,0,5,2,0,The Ethereal Crisis began with a destructive storm of Ethereum crystals.
+121,Clansman of Elias,Arb Paninken,10,2,5,7,4,11,0,0,2,0,0,The clans of Elias fight in an endless brawl for control of the city.
+122,Battle Wizard,Arb Paninken,10,2,6,4,5,4,0,0,4,0,0,"Shall I end you with my staff or my sword?"
+123,Ethereal Wastes II,Hanna Hetmanchuk,10,2,5,0,0,21,0,0,5,0,0,"""I guard my treasure with rivers of flame.""-Lady of Fire"
+124,Ethereal Forest,Hanna Hetmanchuk,10,2,5,0,0,31,30,0,1,10,0,The Lady of the Forest hides her power here.
+125,Totem of Elias,Andrew Dubravushkin,0,0,2,0,0,0,0,0,0,0,0,These totems are sold to tourists in the city of Elias.
+126,Wizards of Ethereum,Vladimir Gasai,11,3,6,2,2,6,8,18,2,4,1,"Twinkling in the tempest. The foundations of power."
+127,Necromancer Captain,Vladimir Gasai,11,3,6,4,3,8,6,0,10,1,0,"Rise up and be alive again. Time is short, both yours and mine."
+128,Ethereal Wastes I,Hanna Hetmanchuk,11,3,5,0,0,9,10,0,1,1,0,"I camped at the crystal's base. I awoke in a storm of bones."
+129,Desert Fencer,Arb Paninken,11,3,4,3,1,19,0,0,1,0,0,Fencers are taught to mimic the fighting styles of sand scorpions.
+130,Early Elias,Hanna Hetmanchuk,11,3,4,0,0,9,20,0,1,2,0,"Light and warmth even through the coldest winters."
+131,Decentralization,Hanna Hetmanchuk,11,3,4,0,0,4,8,0,5,2,0,"""This age will come to an end. The wizards have seen to that.""-Lady of Ethereum"
+132,Clansman of Elias,Arb Paninken,11,3,5,7,4,11,0,0,2,0,0,The Ethereum crystal at the city's heart grants the people of Elias a resistance to cold.
+133,Battle Wizard,Arb Paninken,11,3,6,4,5,4,0,0,4,0,0,Wizards are more often born near Ethereal crystals.
+134,Ethereal Wastes II,Hanna Hetmanchuk,11,3,5,0,0,21,0,0,5,0,0,"""As we approached the stone the air fell to black.""-Royal Cartographer' Guild"
+135,Ethereal Forest,Hanna Hetmanchuk,11,3,5,0,0,31,30,0,1,10,0,Some wounded travelers may find respite in a misty copse.
+136,Totem of Elias,Andrew Dubravushkin,0,0,3,0,0,0,0,0,0,0,0,The totem provides warmth during harsh winters.
+137,Sketchy Wizards,Vladimir Gasai,12,2,6,2,2,6,8,18,2,4,1,"What are we doing today? Oh, just watching some rocks."
+138,Sketchy Captain,Vladimir Gasai,12,2,6,4,3,8,6,0,10,1,0,"I'm only thirty. No, really."
+139,Sketchy Wastes I,Hanna Hetmanchuk,12,2,5,0,0,9,10,0,1,1,0,Animals are attracted to the unnatural warmth given off by fallen crystals.
+140,Sketchy Wastes II,Hanna Hetmanchuk,12,2,5,0,0,9,10,0,1,1,0,Concept scenes from the Ethereal Wastes.
+141,Sketchy Wastes III,Hanna Hetmanchuk,12,2,5,0,0,9,10,0,1,1,0,"There was an inexplicable quiet and a far-off skeletal clicking."
+142,Sketchy Fencer,Arb Paninken,12,2,4,3,1,19,0,0,1,0,0,Most fencers have an unspoken fear of camels.
+143,Sketchy Elias I,Hanna Hetmanchuk,12,2,4,0,0,9,20,0,1,2,0,"It's just a pretty rock. I'd rather live on the beach."
+144,Sketchy Elias II,Hanna Hetmanchuk,12,2,4,0,0,9,20,0,1,2,0,Concept sketches for Early Elias.
+145,Sketchy Elias III,Hanna Hetmanchuk,12,2,4,0,0,9,20,0,1,2,0,"""Behold the people of winter. My wards, my family.""-Lady of Ice"
+146,Sketchy Elias IV,Hanna Hetmanchuk,12,2,4,0,0,9,20,0,1,2,0,The crystal of Elias serves as a waypoint for lost wanderers in the frozen lands.
+147,Decentralization,Hanna Hetmanchuk,12,2,4,0,0,4,8,0,5,2,0,Concept sketches for Decentralization
+148,Sketchy Clansman,Arb Paninken,12,2,5,7,4,11,0,0,2,0,0,"Shut your face before I put you in cold storage."
+149,Sketchy Magic Guy,Arb Paninken,12,2,6,4,5,4,0,0,4,0,0,Abusing magic will eventually turn your skin weird colors.
+150,Sketchy Wastes IV,Hanna Hetmanchuk,12,2,5,0,0,21,0,0,5,0,0,Concept sketches for Ethereal Wastes II
+151,Sketchy Wastes V,Hanna Hetmanchuk,12,2,5,0,0,21,0,0,5,0,0,"It looks like hell. Smells like it too."
+152,Sketchy Wastes VI,Hanna Hetmanchuk,12,2,5,0,0,21,0,0,5,0,0,Touching the stone is said to bestow pyromantic mastery.
+153,Sketchy Wastes VII,Hanna Hetmanchuk,12,2,5,0,0,21,0,0,5,0,0,"Even the air burns in those forsaken wastes."
+154,Sketchy Forest I,Hanna Hetmanchuk,12,2,5,0,0,31,30,0,1,10,0,The woods only reveal themselves to the wounded and sick.
+155,Sketchy Forest II,Hanna Hetmanchuk,12,2,5,0,0,31,30,0,1,10,0,Concept sketches for the Ethereal Forest.
+156,Sketchy Forest III,Hanna Hetmanchuk,12,2,5,0,0,31,30,0,1,10,0,More concept sketches for the Ethereal Forest.
+157,Totem of Elias,Andrew Dubravushkin,0,0,2,0,0,0,0,0,0,0,0,A counterfeit totem of Elias.
+158,King in Yellow,Maybelle Gormate,1000,4,9,7,4,32,0,0,1,0,0,He rules from the Capital. That utopia of bones.
+159,Ethereal Wastes I,Hanna Hetmanchuk,1000,4,5,0,0,9,10,0,1,1,0,A fortune to the wanderer who discovers this stone.
+160,Early Elias,Hanna Hetmanchuk,1000,4,4,0,0,9,20,0,1,2,0,The crystal was hollowed out to build the Great Hall, the center of government in Elias.
+161,Ethereal Wastes II,Hanna Hetmanchuk,1000,4,5,0,0,21,0,0,5,0,0,She who touches the stone assumes the title 'Lady of Fire'.
+162,Early Elias,Hanna Hetmanchuk,9000,200,4,0,0,9,20,0,1,2,0,Early civilizations were often built around fallen crystals.
+163,Admiration of Power,Dani Leoni,9000,200,3,0,0,15,0,0,1,0,0,"People would kill for what I've got."
+164,Happy Ingredients,Daria Oss,9000,200,7,0,0,11,0,0,9,0,0,A table full of ingredients for a helpful Happy potion.
+165,Snow Yeti,Enggar Adirasa,9000,200,7,4,5,8,23,0,3,2,0,"Through the falling snow I heard a terrible gnashing. And a howl louder than anything."
+166,Floating Jelly,Janine Rickmeyer,9000,200,0,0,0,0,0,0,0,0,0,A tentacled inhabitant of the Night Lands.
+167,Ice Golem,Maybelle Gormate,9000,200,6,6,3,7,0,0,1,0,0,Settlement plans in the frozen lands are occasionally disrupted by the discovery of an ice golem nearby.
+168,Time Wizard,Maybelle Gormate,9000,200,0,0,0,0,0,0,0,0,0,"I take my time. Don't rush me or I'll take yours too."
+169,Lady of the Dark,Tomas Navikas,9000,200,4,7,1,16,16,0,2,2,0,"I'm there in the mind of every man. I am arrogance and greed and offended pride."
+170,Lady of Stone,Tomas Navikas,9000,200,0,0,0,0,0,0,0,0,0,"Visit me often. I won't be dead, just still."
+171,Happy the Herbalist,Vladimir Gasai,13,1,4,3,1,9,12,8,2,1,8,Best-selling author of 'Illustrations of Happy the Herbalist.'
+172,Ice Golem,Maybelle Gormate,13,1,6,6,3,7,0,0,1,0,0,Ice golems are mountain sized rock golems that have become frozen in place.
+173,Sewer Monster,Vladimir Gasai,13,1,4,2,2,22,23,0,1,2,0,A mythical creature with the ability to travel through sewers and through time.
+174,Scorpion,Enggar Adirasa,13,1,6,3,4,16,23,0,1,2,0,A burrowing desert creature that often ambushes merchant trains.
+175,Ice Titan,Enggar Adirasa,13,1,7,8,3,24,0,0,2,0,0,Monsters like these roam the desolate regions where men fear to go.
+176,Dionaea Muscipula II,Maybelle Gormate,13,1,6,3,6,4,4,0,3,3,0,A monstrous fly-trap known for swallowing adventurers.
+177,Exiled Skeleton King,Enggar Adirasa,13,1,7,5,2,25,0,0,1,0,0,A former ruler of the Capital, now damned to wander the spirit realms for all of time.
+178,Snow Yeti,Enggar Adirasa,13,1,7,4,5,8,23,0,3,2,0,"Through the falling snow I heard a terrible gnashing. And a howl louder than anything."
+179,Fire TItan,Enggar Adirasa,13,1,7,4,4,8,15,0,3,2,0,An inhabitant of the lava pools often encountered along the Pilgrim's Path.
+180,Puppet Master,Maybelle Gormate,13,1,8,7,3,25,0,0,1,0,0,The Puppet Master of Elias, an ancient creature that 'steals' children from the city.
+181,Skeletal Totem,Dani Leoni,0,0,1,0,0,0,0,0,0,0,0,The lifeless skull of a former skeletal King.
+182,Happy the Herbalist,Vladimir Gasai,14,2,4,3,1,9,12,8,2,1,8,"""I've never seen drawings so fine associated with a face so foul.""-The Capital Newspaper"
+183,Ice Golem,Maybelle Gormate,14,2,6,6,3,7,0,0,1,0,0,Settlement plans in the frozen lands are occasionally disrupted by the discovery of an ice golem nearby.
+184,Sewer Monster,Vladimir Gasai,14,2,4,2,2,22,23,0,1,2,0,"Sometimes it pops up out of holes, sometimes it pops up out of time."
+185,Scorpion,Enggar Adirasa,14,2,6,3,4,16,23,0,1,2,0,A variant of the scorpion with an acidic venom.
+186,Ice Titan,Enggar Adirasa,14,2,7,8,3,24,0,0,2,0,0,The ice skeleton shatters easily when attacked, although very few have attempted this.
+187,Dionaea Muscipula II,Maybelle Gormate,14,2,6,3,6,4,4,0,3,3,0,"The wailing, glowing mouths lit the forest for miles in every direction."
+188,Exiled Skeleton King,Enggar Adirasa,14,2,7,5,2,25,0,0,1,0,0,Endlessly restless. Damnation and usurpation is the eventual fate of all skeletal kings.
+189,Snow Yeti,Enggar Adirasa,14,2,7,4,5,8,23,0,3,2,0,A beast known for destroying houses and stealing livestock in the frozen wastes.
+190,Fire TItan,Enggar Adirasa,14,2,7,4,4,8,15,0,3,2,0,"Stay out of its reach. It won't leave the hot spots. Still throws lava though."
+191,Puppet Master,Maybelle Gormate,14,2,8,7,3,25,0,0,1,0,0,"The ties are more mental than physical. I believe the creature is a telepath, one that can only communicate with children."
+192,Skeletal Totem,Dani Leoni,0,0,2,0,0,0,0,0,0,0,0,The elite of the Capital collect the bones of exiled kings.
+193,Happy the Herbalist,Vladimir Gasai,15,3,4,3,1,9,12,8,2,1,8,Happy inspired a new generation of adventurers to visit her forest.
+194,Ice Golem,Maybelle Gormate,15,3,6,6,3,7,0,0,1,0,0,Children of the snow peoples make a game of taunting ice golems by standing just out of reach.
+195,Sewer Monster,Vladimir Gasai,15,3,4,2,2,22,23,0,1,2,0,The King in Yellow has an entire branch of the library dedicated to studying this creature.
+196,Scorpion,Enggar Adirasa,15,3,6,3,4,16,23,0,1,2,0,"Skittering sands, skittering sands. Look for the tracks, listen for the skittering."
+197,Ice Titan,Enggar Adirasa,15,3,7,8,3,24,0,0,2,0,0,Ice titans often live in blizzards, following the storms to maintain their frigid armor.
+198,Dionaea Muscipula II,Maybelle Gormate,15,3,6,3,6,4,4,0,3,3,0,The plants were made famous by the widespread publication of 'Illustrations of Happy the Herbalist'.
+199,Exiled Skeleton King,Enggar Adirasa,15,3,7,5,2,25,0,0,1,0,0,This king was exiled after failing the skeletal peoples during the Ethereal Crisis.
+200,Snow Yeti,Enggar Adirasa,15,3,7,4,5,8,23,0,3,2,0,Princes in the frozen lands may not assume the throne without first defeating a Yeti in combat.
+201,Fire TItan,Enggar Adirasa,15,3,7,4,4,8,15,0,3,2,0,"""It's surprisingly weak for a being made of fire.""-Pilgrim Otto, a famous monk"
+202,Puppet Master,Maybelle Gormate,15,3,8,7,3,25,0,0,1,0,0,"""We're all puppets. Just some more than others.""-Mayor of Elias"
+203,Skeletal Totem,Dani Leoni,0,0,3,0,0,0,0,0,0,0,0,The skulls are cast in metal and worn as jewelry.
+204,Sketchy Happy,Vladimir Gasai,16,2,4,3,1,9,12,8,2,1,8,"""I could've been your girl. And you could've been my four leaf clover."" - She & Him"
+205,Sketchy Ice Golem I,Maybelle Gormate,16,2,6,6,3,7,0,0,1,0,0,"The town of Elias is easy to find. It's due east of old Sanford, the ice golem."
+206,Sketchy Sewers,Vladimir Gasai,16,2,4,2,2,22,23,0,1,2,0,The sewer monster, seen here prowling the streets of Brooklyn.
+207,Sketchy Scorpion,Enggar Adirasa,16,2,6,3,4,16,23,0,1,2,0,Scorpions are easily frightened  by large groups of camels.
+208,Sketchy Ice Titan,Enggar Adirasa,16,2,7,8,3,24,0,0,2,0,0,The Lady of Ice has a personal army of ice titans for keeping peace in the frozen lands.
+209,Sketchy Muscipula,Maybelle Gormate,16,2,6,3,6,4,4,0,3,3,0,"""They may offer you fortune and fame. Love and money and instant acclaim. But whatever they offer you, don't feed the plants."" - Alan Menken"
+210,Sketchy Exile,Enggar Adirasa,16,2,7,5,2,25,0,0,1,0,0,"""Sleep no more! Macbeth does murder sleep!"" - William Shakespeare"
+211,Sketchy Yeti,Enggar Adirasa,16,2,7,4,5,8,23,0,3,2,0,In between killing and eating, snow yeti are also known to roll around in the snow for fun.
+212,Sketchy Fire Titan,Enggar Adirasa,16,2,7,4,4,8,15,0,3,2,0,"""Kill it with fire!""-Fire Titan"
+213,Sketchy Puppet,Maybelle Gormate,16,2,8,7,3,25,0,0,1,0,0,The creature's only concern is maintaining this shrine to a long dead god.
+214,Sketchy Ice Golem II,Maybelle Gormate,16,2,6,6,3,7,0,0,1,0,0,The legend of Muirhall is a popular tale about a short lived city built next to a slumbering ice golem.
+215,Skeletal Totem,Dani Leoni,0,0,2,0,0,0,0,0,0,0,0,Synchronization failed, dropping peer. Rolled back headers count = 15.
+216,Vorp Crab,Tomas Navikas,9999,100,3,1,1,4,0,0,1,0,0,A merkle pet that enjoys eating butterflies.
+217,Merkle Seal I,Spudistic,9999,100,3,1,1,16,0,0,2,0,0,A merkle pet proficient at fending off beach crabs.
+218,Merkle Turtle I,Spudistic,9999,100,2,1,1,2,0,0,1,0,0,A merkle pet known to light up the shore at night.
+219,Divination Fish,Spudistic,9999,100,3,0,0,8,33,0,3,3,0,A merkle pet used for fortune telling.
+220,Merkle Turtle II,Spudistic,9999,100,2,1,1,24,0,0,2,0,0,This merkle pet can generate a force field.
+221,Succulent Fish,Spudistic,9999,100,3,1,1,1,0,0,1,0,0,A merkle pet with a fiery rosette.
+222,Combustion Fish,Spudistic,9999,100,3,0,0,16,0,0,3,0,0,A merkle pet used for heating interiors.
+223,Merkle Turtle III,Spudistic,9999,100,3,1,1,27,0,0,1,0,0,A merkle pet with a glowing tail.

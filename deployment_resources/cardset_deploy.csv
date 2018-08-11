@@ -1,0 +1,25 @@
+_id.int32(),setTitle.string(),setRarity.int32()
+0,Totems,0
+1000,Legendary Cards,4
+9000,Fine Art Prints,200
+9999,Promo,100
+1,The Capital Library (C),1
+2,The Capital Library (R),2
+3,The Capital Library (E),3
+4,The Capital Library (S),2
+5,Drawings of Happy the Herbalist,1
+6,Drawings of Happy the Herbalist,2
+7,Drawings of Happy the Herbalist,3
+8,Drawings of Happy the Herbalist,2
+9,Foundations of Power (C),1
+10,Foundations of Power (R),2
+11,Foundations of Power (E),3
+12,Foundations of Power (S),2
+13,Merkle Monstrosities (C),1
+14,Merkle Monstrosities (R),2
+15,Merkle Monstrosities (E),3
+16,Merkle Monstrosities (S),2
+17,Ladies of the Royal Covenant,1
+18,Ladies of the Royal Covenant,2
+19,Ladies of the Royal Covenant,3
+20,Ladies of the Royal Covenant,2

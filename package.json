@@ -1,0 +1,46 @@
+{
+  "name": "watch-events-truffle-express-node",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "start-": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 3000",
+    "test": "jest"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "browser-sync": "^2.23.5",
+    "consolidate": "^0.15.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ethereumjs-util": "^5.2.0",
+    "express": "~4.15.5",
+    "express-validator": "^5.2.0",
+    "helmet": "^3.12.1",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^8.2.1",
+    "mongoose": "^5.0.1",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.14.11",
+    "phaser-ce": "^2.11.0",
+    "rangeslider.js": "^2.3.2",
+    "serve-favicon": "~2.4.5",
+    "swig": "^1.4.2",
+    "truffle-contract": "^3.0.2",
+    "uuid": "^3.3.2",
+    "web3": "^0.20.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.4.1",
+    "regenerator-runtime": "^0.12.0"
+  }
+}

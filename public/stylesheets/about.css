@@ -1,0 +1,216 @@
+body {
+  background: #EAFFE3 !important;
+  font-size: 20px;
+}
+
+/*Styling for navigation bar*/
+.nav-top a:visited, .nav-top a:link{
+    text-decoration: none;
+    color: white;
+}
+.nav-top a:hover {
+  color: #feffa0;
+}
+.nav-top #active-link{
+  text-decoration: underline;
+  color: #00ADC4;  
+}
+.nav-top #active-link a:visited,.nav-top #active-link a:link{
+  color: white;
+}
+.nav-element {
+  padding: 10px;
+  text-align: left;
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-title {
+  font-size: 23px;
+  text-align: center;
+}
+.nav-top {
+  display: grid;
+  height: auto;
+  grid-template-columns: auto auto auto auto auto auto;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  grid-auto-flow: column;
+  border-bottom: 2px solid #1B3280;
+  background: #990000;
+}
+
+.container {
+  padding: 40px;
+}
+
+.list-group.help-group {
+  margin-bottom: 20px;
+  padding-left: 0;
+  margin: 0;
+  .faq-list {
+    display: block;
+    top: auto;
+    margin: 0 0 32px;
+    border-radius: 2px;    
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 5px rgba(85, 85, 85, 0.15);
+    .list-group-item {
+      position: relative;
+      display: block;
+      margin: 0;
+      padding: 13px 16px;
+      border: 0;
+      border-bottom: 1px solid #ddd;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      color: #616161;
+      transition: background-color .2s;
+      i.mdi {
+        margin-right: 5px;
+        font-size: 25px;
+        position: relative;
+        top: 2px;
+      }
+      &:hover {
+        background: red !important;
+      }
+      &:last-of-type {
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.tab-content.panels-faq {
+  padding: 0;
+  border: 0;
+}
+
+.panel.panel-help {
+  box-shadow: 0 1px 5px rgba(85, 85, 85, 0.15);
+  padding-bottom: 0;
+  border-radius: 2px;
+  overflow: hidden;
+  background-color: #fff;
+  /*margin: 0 0 16px;*/
+  a[href^="#"],
+  a[href^="#"]:hover,
+  a[href^="#"]:focus {
+    outline: none !important;
+    cursor: pointer;
+    text-decoration: none !important;
+  }
+  .panel-heading {
+    /*background-color: #f6f6f6;*/
+    /*padding: 0 16px;*/
+    /*line-height: 48px;*/
+/*    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;*/
+    /*color: rgba(0,0,0,.87);*/
+    color: red !important;
+    h2 {      
+      margin: 0;
+      /*padding: 14px 0 14px;*/
+      font-size: 18px;
+      color: red !important;
+      /*font-weight: 400;*/
+      /*line-height: 20px;*/
+      /*letter-spacing: 0;*/
+      /*text-transform: none;*/
+    }
+  }
+  .panel-body {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-radius: 2px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    margin-top: 0;
+    p {
+      margin: 0 0 16px;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+}
+
+/*Overriding bootstrap*/
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+  background-color: #990000;
+  border-color: #990000;
+  color: white;
+  font-weight: bold;
+}
+.panel-heading {
+  color: white;
+  background: #990000;
+}
+
+.panel-heading h2 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+}
+
+.panel-heading a {
+  text-decoration: none !important;
+}
+.panel-heading a:hover{
+  text-decoration: none !important;
+}
+.panel-heading a:visited{
+  text-decoration: none !important;
+}
+
+a{
+  text-decoration: none !important;
+}
+a:visited {
+  text-decoration: none !important;
+}
+
+@media (max-width: 600px) {
+  .nav-top {
+  display: grid;
+  height: auto;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(6, 100%);
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0px;
+  }
+  .nav-element{
+    text-align: center;
+    color: white;
+    background: #990000;
+    border: 2px solid white;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    width: 100%
+    padding: 0px;
+  }
+  .nav-top, .nav-element{
+    display: block;
+  }
+  .col-md-4{
+    padding: 0px;
+    width: 100%;
+  }
+  .col-md-8 {
+    padding: 0px;
+    width: 100%;
+  }
+  .container {
+    padding: 0px;
+    padding-top: 10px;
+  }
+}

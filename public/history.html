@@ -1,0 +1,39 @@
+<html>
+	<head>
+		  <base href="/">
+		  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		  <link rel="icon" href="favicon.ico" type="image/x-icon">
+		  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+		  <meta charset="UTF-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		  <title>Merkle Brothers - My History</title>
+		  <meta name="description" content="View your card history including cards purchased from packs and generated from totems.">
+		  <link rel="canonical" href="https://www.merklebros.com/history">
+		  <link rel="stylesheet" href="stylesheets/history.css">
+		  <!-- angular -->
+		  <script src="libs/angular/angular.min.js"></script>
+		  <script src="libs/angular-route/angular-route.min.js"></script>
+		  <!-- angular custom -->
+		  <script src="javascripts/controllers/HistoryCtrl.js"></script>  
+		  <script src="javascripts/angular-history-app.js"></script> 
+		  <!-- Other js -->
+		  <script src="./javascripts/login.js"></script>
+	</head>
+	<body>
+		<div class="nav">
+			<div class="nav-element nav-title"><a href="/" target="_self">Merkle Bros Trading Card Game</a></div>
+			<div class="nav-element"><a href="/my-collection" target="_self">My Collection</a></div>
+			<div class="nav-element"><a href="/auction-house" target="_self">Auction House</a></div>
+			<div class="nav-element"><a href="/buy-packs" target="_self">Buy Packs</a></div>
+			<div class="nav-element">Arena</div>
+			<div class="nav-element"><a href="/about" target="_self">About</a></div>
+            <div class="nav-element" id="web3LoginButton"><a href="#">Login</a></div>
+		</div>
+		<div class="title">My Card History</div>
+		<div class="history" ng-app="angular-history-app" ng-controller="HistoryController">
+			<div class="history-item" style="font-weight: bold; text-decoration: underline">History shows cards generated from buying packs, using totems, or purchasing cards in Auction House.</div>
+			<div class="history-item" ng-repeat="card in cards | orderBy: card.blockNumber : true"><b>(Blocknumber {{card.blockNumber}})</b> Acquired <b>{{card.cardPrototype.title}}</b> (tokenId: {{card._id}}) from set {{card.cardPrototype.cardSet}} - <b>{{card.cardPrototype.setTitle}}</b> ({{card.rarityText}})</div>
+		</div>
+	</body>
+</html>

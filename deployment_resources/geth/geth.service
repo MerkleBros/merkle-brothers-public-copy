@@ -1,0 +1,10 @@
+[Unit]
+Description=Ethereum go client
+
+[Service]
+Type=simple
+#Add unlock with password flag when copying this file in production
+ExecStart=/usr/bin/geth --testnet --cache 6000 --rpc --rpcapi "eth,web3,net,personal" --rpccorsdomain "*" --datadir %h/.ethereum/testnet 2>%h/.ethereum/geth.log
+
+[Install]
+WantedBy=default.target

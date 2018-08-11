@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Merkle Brothers - Buy Packs</title>
+  <meta name="description" content="Purchase packs of Ethereum tracked trading cards.">
+  <link rel="canonical" href="https://www.merklebros.com/buy-packs">
+  <!-- Code relating to jquery slider -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="stylesheets/buypacks.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    function refreshSwatch() {
+      var red = $("#red").slider("value");
+      var ethCardPrice = 0.001057;
+      $( "#purchase-number" ).html(red);
+      $("#eth-number").html(ethCardPrice * red);
+    }
+ 
+    $( "#red" ).slider({
+      orientation: "horizontal",
+      range: "min",
+      min: 1,
+      max: 30,
+      value: 5,
+      slide: refreshSwatch,
+      change: refreshSwatch
+    });
+  } );
+  </script>
+  <!-- End code relating to jquery slider -->
+  <!-- Other js -->
+  <script src="./javascripts/login.js"></script>
+</head>
+<body>
+	<div class="app-buy-packs">
+		<div class="nav">
+			<div class="nav-element nav-title"><a href="/">Merkle Bros Trading Card Game</a></div>
+			<div class="nav-element"><a href="/my-collection">My Collection</a></div>
+			<div class="nav-element"><a href="/auction-house">Auction House</a></div>
+			<div class="nav-element" id="active-link"><a href="/buy-packs">Buy Packs</a></div>
+			<div class="nav-element">Arena</div>
+			<div class="nav-element"><a href="/about">About</a></div>
+            <div class="nav-element" id="web3LoginButton"><a href="#">Login</a></div>
+		</div>
+		<div class="buy-packs">
+			<div class="lo"></div>
+			<div class="buy-packs-title">Buy packs</div>
+			<div class="buy-packs-content">
+				<div class="buy-packs-explanation">
+					<div class="buy-packs-image"><img src="images/random_cards2.JPG" alt=""></div>
+					<div class="buy-packs-explanation-text">
+						<p style="font-weight: bold">Buy cards</p>
+						<p>Use the slider below to choose how many cards to buy. </p>
+						<p>Cards are randomly generated with the following rarities: </p>
+						<p class="rarities">Common - 50%  Rare - 35%  Epic - 14%  Legendary - 1%</p>
+						<p style="font-weight: bold; font-style: italic;">"Look at how reasonably priced these cards are!"</p>
+						<p>Merkle Bros will always be an accessible game. </p>
+						<p>Cards are priced so that everyone can enjoy the artwork and build their own collection.</p>
+						<p style="padding-top: 8px; font-weight: bold;"><a href="auction-house">If you're a big spender, consider purchasing limited editions from the Auction House to help support the game!</a></p>
+					</div>
+				</div>
+				<div class="buy-packs-slider">
+					<div id="purchase"><p>Purchase <span id="purchase-number">5</span> cards for <span id="eth-number">0.0053</span> ETH</p></div>
+					<div id="red"></div>
+					<button id="purchase-button" style="background-color: #990000; color: rgb(255, 255, 255); text-decoration: none; padding: 0.5em 1em;border-radius: 4px; width: 100%; font-size: 20px">Unwrap pack</button>
+					<div style="padding: 5px; font-size: 20px; font-weight: bold; margin-top: 10px; margin-bottom: 20px; color: #faff5f; background-color: #990000; text-decoration: none; line-height: 1em; border: 5px solid black;">
+						<p><a href="/my-collection">Cards are viewable by set at My Collection.</a></p>
+						<p><a href="/history">Cards are viewable by history here.</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="ro"></div>
+		</div>
+	</div>
+	<script src="javascripts/truffle-contract.js"></script>
+	<script src="javascripts/packs-app.js"></script>
+</body>
+ 
+</html>

@@ -1,0 +1,9 @@
+{
+    "name": "merkle-brothers-app",
+    "version": "1.0.0",
+    "dependencies": {
+        "angular": "latest",
+        "angular-route": "latest",
+        "ethereumjs-util": "latest"   
+    }
+}

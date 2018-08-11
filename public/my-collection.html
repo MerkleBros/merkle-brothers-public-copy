@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="/">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Merkle Brothers - My Collection</title>
+  <meta name="description" content="View your trading card collection. Complete sets of cards to unlock totems and generate more cards!">
+  <link rel="canonical" href="https://www.merklebros.com/my-collection">
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Bootstrap js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="stylesheets/my-collection.css">
+  <!-- angular -->
+  <script src="libs/angular/angular.min.js"></script>
+  <script src="libs/angular-route/angular-route.min.js"></script>
+  <!-- angular custom -->
+  <script src="javascripts/services/CardService.js"></script>  
+  <script src="javascripts/controllers/CardCtrl.js"></script>  
+  <script src="javascripts/AppRoutes.js"></script>  
+  <script src="javascripts/angular-app.js"></script> 
+  <!-- other js -->
+  <script src="javascripts/my-collection-app.js"></script>
+  <script src="./javascripts/login.js"></script>
+  <!-- End code relating to jquery slider -->
+</head>
+<body>
+	<div class="app-my-collection" ng-app="merkle-brothers-angular-app" ng-controller="CardController">
+		<div class="nav">
+			<div class="nav-element nav-title"><a href="/" target="_self">Merkle Bros Trading Card Game</a></div>
+			<div class="nav-element" id="active-link"><a href="/my-collection" target="_self">My Collection</a></div>
+			<div class="nav-element"><a href="/auction-house" target="_self">Auction House</a></div>
+			<div class="nav-element"><a href="/buy-packs" target="_self">Buy Packs</a></div>
+			<div class="nav-element">Arena</div>
+			<div class="nav-element"><a href="/about" target="_self">About</a></div>
+            <div class="nav-element" id="web3LoginButton"><a href="#">Login</a></div>
+		</div>
+		<div class="my-collection">
+			<div class="lo"></div>
+			<div class="t"><span>My Collection</span><span id="user-address"></span></div>
+			<div class="sub-nav">
+				<div class="switch-set">
+					<span id="switch-description">
+						<p>Your cards are shown below. <a href="/history" target="_self" style="color: red; font-weight: bold;">Visit your history page to see recent card activity</a></p>
+						<p>Use the set selector to view cards from different sets. Owned cards are shown in color. Click on owned cards to see card details.</p>
+						<p>When you finish a set you can click on the set's totem to claim and use that totem.</p></span>
+<!-- 					<button id="common">Common</button>
+					<button id="rare">Rare</button>
+					<button id="epic">Epic</button>
+					<button id="legendary">Legendary</button>
+					<button id="promo">Promo</button> -->
+					<span>
+						<select id="set-select" name="sets" class="form-control form-control-lg" ng-options="set._id as (set._id + ' - ' + set.setTitle) for set in sets | orderBy: '_id'" ng-change="updateSelectedSet(selectedSet)" ng-model="selectedSet"></select>
+					</span>			
+				</div>
+				<div class="st">
+					<span id="set-title">Set #{{selectedSet}}: {{selectedSetTitle}} - {{selectedSetRarityText}}</span>
+				</div>
+			</div>
+			<div class="c">
+				<div class="set">
+					<div class="cards" ng-if="selectedSet != 0 && selectedSet % 4 != 0">
+						<div class="card" ng-repeat="card in cardStatusArray | limitTo: 10">
+							<img ng-click="updateSelectedCard(card.id)" data-toggle="{{card.owned && 'modal' || ''}}" data-target="{{card.owned && '#exampleModal' || ''}}" ng-class="{'shadow-filter': card.owned}" ng-src="{{card.owned && 'images/owned/' + card.id + '.jpg' || 'images/unowned/' + card.id + '.jpg'}}" alt=""/>
+						</div>
+						<div class="card" ng-repeat="i in inverseCardStatusArrayCount">
+							<img ng-src="images/unowned/card_not_released.jpg" alt=""/>
+						</div>
+					</div>
+					<div class="cards" ng-if="selectedSet == 0 || selectedSet % 4 == 0">
+						<div class="card" ng-repeat="card in cardStatusArray">
+							<img ng-click="updateSelectedCard(card.id)" data-toggle="{{card.owned && 'modal' || ''}}" data-target="{{card.owned && '#exampleModal' || ''}}" ng-class="{'shadow-filter': card.owned}" ng-src="{{card.owned && 'images/owned/' + card.id + '.jpg' || 'images/unowned/' + card.id + '.jpg'}}" alt=""/>
+						</div>
+						<div class="card" ng-repeat="i in inverseCardStatusArrayCount">
+							<img ng-src="images/unowned/card_not_released.jpg" alt=""/>
+						</div>
+					</div>
+					<div class="totem" ng-if="selectedSet != 0">
+						<div class="totem-wrapper">
+							<div id="totem-title">Set Totem</div>
+							<img ng-if="!canClaimTotem" id="totem-image" ng-class="{'shadow-filter': isSelectedTotems}" ng-src="{{totemSource}}" ng-click="updateSelectedCard(selectedTotemPrototype._id)" data-toggle="{{isSelectedTotems && 'modal' || ''}}" data-target="{{selectedTotems != undefined && '#exampleModal' || ''}}" alt="">
+							<img ng-if="canClaimTotem" id="totem-image" ng-class="{'shadow-filter2': canClaimTotem}" ng-src="{{totemSource}}" ng-click="updateSelectedCard(selectedTotemPrototype._id)" data-toggle="{{'modal'}}" data-target="{{'#exampleModal'}}" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ro"></div>
+		</div>
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div ng-class="{'totem-modal-selected': selectedCard.cardSet == 0}" class="modal-dialog modal-dialog-centered" role="document">
+		    <div class="modal-content text-cener">
+		      <div class="modal-body text-center">
+		      	<div ng-if="selectedCard.rarity == 0 && !canClaimTotem" class="modal-top">
+					<span>Selected totem: <select id="totem-select" name="selectedTotems" ng-options="totem._id as ('TokenId: ' + totem._id) for totem in selectedTotems | orderBy: '_id'" ng-change="updateSelectedTotem(selectedTotemId)" ng-model="selectedTotemId"></select></span>		
+		      	</div>
+		      	<div>
+		      		<img class="img-responsive center-block" ng-src="{{'images/cards/' + selectedCard._id + '.png'}}"/>
+		      	</div>
+		      </div>
+		      <div class="modal-footer text-center">
+		      	<div class="container-fluid">
+	      		    <div class="row">
+				      <div class="col-md-12">
+				      	<p class="modal-card-title">{{selectedCard.title}}</p>
+				      </div>
+				    </div>
+	      		    <div class="row">
+				      <div class="col-md-12">
+				      	<p>Set: {{selectedCard.setTitle}} ({{selectedCard.rarityText}})</p>
+				      </div>
+				    </div>
+	      		    <div class="row">
+				      <div class="col-md-12">
+				      	<p>Artist: {{selectedCard.artist}}</p>
+				      </div>
+				    </div>
+	      		    <div class="row" ng-if="!canClaimTotem">
+				      <div class="col-md-12">
+				      	<p>Number owned: {{selectedTokens.length}}</p>
+				      </div>
+				    </div>
+	      		    <div class="row" ng-if="!canClaimTotem">
+				      <div class="col-md-12">
+				      	<p><span>TokenIds: </span>
+						<span ng-repeat="token in selectedTokens"> {{token._id}}, </span></p>
+				      </div>
+				    </div>
+	      		    <div class="row" ng-if="!canClaimTotem">
+				      <div class="col-md-12">
+						<p ng-if="selectedCard.rarity ==0" style="font-weight: bold">Use totem to generate a card from each set</p>
+				      </div>
+				    </div>
+				    <div id="totem-buttons-div" class="row" ng-if="selectedCard.rarity == 0 && !canClaimTotem">
+						<div class="col-md-4" ng-repeat="set in totemSets">
+							<button ng-disabled="usedSetsById[set._id]" ng-click="useTotem(selectedTotemId, set._id)" class="totem-use-button" ng-class="{'set-used-button': usedSetsById[set._id]}" id="totem-button-{{set._id}}">{{set.setTitle}}</button>
+						</div>
+					</div>
+					<div class="row" ng-if="canClaimTotem">
+						<div class="col-md-12">
+							<p style="font-weight: bold">You can claim the set totem!</p>
+						</div>
+					</div>
+					<div class="row" ng-if="canClaimTotem">
+						<div class="col-md-12" id="claim-totem-message">
+							<button ng-click="claimTotem()" class="totem-use-button">Claim totem</button>
+						</div>
+					</div>
+				</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</body>
+ 
+ 
+</body>
+</html>

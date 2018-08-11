@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Merkle Brothers - Auction House</title>
+    <meta name="description" content="Purchase blockchain tracked fine art prints, founder's totems, and promo cards.">
+    <link rel="canonical" href="https://www.merklebros.com/auction-house">
+    <!-- jquery for bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="bootstraptiles.css" rel="stylesheet">  
+    <!-- angular -->
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <!-- angular custom -->
+    <script src="javascripts/controllers/ArtCardCtrl.js"></script>  
+    <script src="javascripts/angular-auction-house-app.js"></script> 
+    <!-- Other js -->
+    <script src="./javascripts/login.js"></script>
+</head>
+
+  <body>
+    <div class="app-auction-house">
+      <div class="nav">
+        <div class="nav-element nav-title"><a href="/">Merkle Bros Trading Card Game</a></div>
+        <div class="nav-element"><a href="/my-collection">My Collection</a></div>
+        <div class="nav-element" id="active-link"><a href="/auction-house">Auction House</a></div>
+        <div class="nav-element"><a href="/buy-packs">Buy Packs</a></div>
+        <div class="nav-element">Arena</div>
+        <div class="nav-element"><a href="/about">About</a></div>
+        <div class="nav-element" id="web3LoginButton"><a href="#">Login</a></div>
+      </div>
+    </div>
+
+    <main ng-view ng-app="angular-auction-house-app" ng-controller="ArtCardController" role="main">
+    </main>
+  </body>
+</html>

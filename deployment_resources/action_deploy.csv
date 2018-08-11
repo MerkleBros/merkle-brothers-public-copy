@@ -1,0 +1,34 @@
+_id.int32(),action.string(),description.string()
+1,HEAL,Heal one target
+2,DRAW_FROM_DECK,Draw cards from deck
+3,DRAW_FROM_OP,Draw cards from opponent's hand
+4,DMG_ENEMY,Deal damage to an enemy
+5,DMG_FRIEND,Deal damage to a friend
+6,DRAW_DISCARD_TGT,Draw cards from discard (choose)
+7,PARALYZE_ENEMY,Targeted enemy cannot perform action for one turn
+8,DMG_SELF,Deal damage to self
+9,DMG_OPP_DEV,Set back opponent's development
+10,DISCARD_SELF,Discard cards (self)
+11,HEAL_FRIEND,Heal one friend
+12,DMG_SELF_DEV,Set back your development (self)
+13,SWAP_FIGHTERS,Swap this fighter with an enemy fighter
+14,KILL_ENEMY_HEALTH_LT_COST,Kill an enemy with health less than the cost of this card
+15,DISCARD_OPP,Opponent discards cards
+16,DMG,Deal damage to any target
+17,KILL_ENEMY,Kill an enemy fighter
+18,DMG_OPP,Deal damage to your opponent
+19,Evade,Dodge attacks against this fighter
+20,GIVE_CARDS,Give cards to opponent
+21,DISCARD_AND_DRAW,Discard some number of cards and draw that many from deck
+22,ATTACK_ON_DEPLOY,Fighter attacks when played
+23,MULTIPLE_ATTACKS,Fighter can attack more than one time
+24,DMG_DEFEND,Fighter deals damage when attacked
+25,CONTROL_ENEMY,Turn an enemy fighter to your side
+26,BOOST_SELF_DEV,Boost your development
+27,VIEW_FROM_OPP,View cards from your opponent's hand
+28,DRAW_DISCARD_RAND,Draw a random card from your discard pile
+29,FREE_PLAY,Play a card from your hand for free
+30,HEAL_SELF,Heal self
+31,OPP_DRAW_DISCARD_TGT,Opponent draws from discard (they choose)
+32,DEPLOY,Deploy another fighter from your hand (any cost)
+33,VIEW_FROM_DECK_SELF,View cards from top of your deck

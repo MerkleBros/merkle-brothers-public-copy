@@ -1,0 +1,145 @@
+html, body {
+  height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #EAFFE3;
+	color: white;
+}
+
+/*Styling for navigation bar*/
+.nav-top a:visited, .nav-top a:link{
+    text-decoration: none;
+    color: white;
+}
+.nav-top a:hover {
+  color: #feffa0;
+}
+.nav-top #active-link{
+  text-decoration: underline;
+  color: #00ADC4;  
+}
+.nav-top #active-link a:visited,.nav-top #active-link a:link{
+  color: white;
+}
+.nav-element {
+  padding: 10px;
+  text-align: left;
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-title {
+  font-size: 23px;
+  text-align: center;
+}
+.nav-top {
+  display: grid;
+  height: auto;
+  grid-template-columns: auto auto auto auto auto auto;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  grid-auto-flow: column;
+  border-bottom: 2px solid #1B3280;
+  background: #990000;
+}
+.active {
+	background-color: green	
+}
+#app{
+	color: black;
+	height: 100%;
+}
+#game-container {
+	height: 100vh;
+}
+#board {
+	display: grid;
+	background-color: black;
+	height: 100%;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 5px;
+}
+#lane-one {
+	background-color: white;
+	border: 3px solid black;
+	display: grid;
+	grid-template-rows: auto auto;
+}
+#lane-one-friendly {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+}
+#lane-one-opponent {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+}
+#lane-two {
+	background-color: blue;
+	border: 3px solid black;
+	display: grid;
+	grid-template-rows: auto auto;
+}
+#lane-two-friendly {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+}
+#lane-two-opponent {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+}
+#lane-three {
+	background-color: orange;
+	border: 3px solid black;
+	display: grid;
+	grid-template-rows: auto auto;
+}
+#lane-three-friendly {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+}
+#lane-three-opponent {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+}
+#state {
+	color: white;
+	background-color: #292C33;
+}
+.fighterImage{
+	height: 120px;
+	width: 150px;
+}
+.fighterImage img {
+	max-height: 100%;
+    max-width: 100%;
+	box-shadow: 0px 6px 7px rgb(10, 35, 80);
+}
+.friendlyFighterSelected img{
+	box-shadow: 0px 0 35px rgb(79, 255, 35);
+	border: solid 3px rgb(79, 255, 35);
+}
+.enemyFighterSelected img{
+    box-shadow: 0px 0 20px rgb(175, 25, 0);
+	border: solid 3px rgb(175, 25, 0);
+}
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 40px;
+   background-color: white;
+   color: black;
+   text-align: center;
+}

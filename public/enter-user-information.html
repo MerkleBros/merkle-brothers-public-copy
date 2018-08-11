@@ -1,0 +1,111 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Merkle Bros - Enter User Information</title>
+    <meta name="description" content="Enter your user information if you have purchased a blockchain tracked fine art print.">
+    <!-- jquery for bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="bootstraptiles.css" rel="stylesheet">  
+    <!-- angular -->
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <!-- angular custom -->
+    <script src="javascripts/controllers/ArtCardCtrl.js"></script>  
+    <script src="javascripts/angular-auction-house-app.js"></script> 
+    <!-- Other js -->
+    <script src="./javascripts/login.js"></script>
+</head>
+
+  <body>
+    <div class="app-auction-house">
+      <div class="nav">
+        <div class="nav-element nav-title"><a href="/">Merkle Bros Trading Card Game</a></div>
+        <div class="nav-element"><a href="/my-collection">My Collection</a></div>
+        <div class="nav-element"><a href="/auction-house">Auction House</a></div>
+        <div class="nav-element"><a href="/buy-packs">Buy Packs</a></div>
+        <div class="nav-element">Arena</div>
+        <div class="nav-element"><a href="/about">About</a></div>
+        <div class="nav-element" id="web3LoginButton"><a href="#">Login</a></div>
+      </div>
+    </div>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Auction House</h1>
+          <p class="lead text-muted">Purchase limited edition fine-art prints to help support game development. Each illustration will have 10 blockchain tracked prints. Prints will ship in late Spring 2018. Final print dimensions subject to quality and cost constraints. </p>
+        </div>
+      </section>
+
+      <div ng-app="angular-auction-house-app" ng-controller="ArtCardController">
+        <div class="container">
+          <div class="row">
+            <div ng-repeat="card in artCardPrototypes" class="col-sm-3 card-wrapper">
+              <div ng-click="updateSelectedCard(card._id)" data-toggle="modal" data-target="#auctionModal" class="card h-100">
+                <img class="card-img-top" src="images/tiles-examples/{{card._id}}.jpg" alt="card image">
+                <div class="card-body text-center">
+                  <p class="title">{{card.title}}</p>
+                  <p class="artist">by {{card.artist}}</p>
+                  <p class="flavor-text">"This is a card description that happened one time the other day it's long."</p>
+                </div>
+                <div class="x row align-items-bottom">
+                  <div class="col-md-6 text-left">
+                      <span class="float-md-left">Available: {{card.amount}}</span>
+                  </div>
+                  <div class="col-md-6 text-right">
+                      <span class="float-md-right">{{card.price}}Ξ</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="auctionModal" tabindex="-1" role="dialog" aria-labelledby="auctionModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content text-cener">
+              <div class="modal-body text-center">
+                <div>
+                  <img class="img-responsive center-block" ng-src="images/tiles-examples/{{selectedCard._id}}.jpg" alt="print image should be here">
+                </div>
+              </div>
+              <div class="modal-footer text-center">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="modal-card-title">{{selectedCard.title}}</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>Artist: {{selectedCard.artist}}</p>
+                    </div>
+                  </div>
+                  <div class="row" ng-if="selectedCard.cardSet == 9000">
+                    <div class="col-md-12">
+                      <p>This is a blockchain tracked <a href="about">fine art print</a>. Prints will ship in early Summer 2018.</p>
+                      <p>Print sizes will be determined at the time of printing and are subject to cost and quality constraints.</p>
+                      <p>There are <b>{{selectedCard.amount}}</b> prints left.
+                    </div>
+                  </div>
+                  <div class="row" ng-if="selectedCard.cardSet == 9000">
+                    <div class="col-md-12">
+                      <button class="buy-card-button" ng-click="buyCard(selectedCard._id)">Purchase print ({{selectedCard.price}}Ξ)</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

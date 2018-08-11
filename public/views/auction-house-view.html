@@ -1,0 +1,128 @@
+<section class="jumbotron text-center">
+  <div id="prints-explanation" class="container">
+    <h1 class="jumbotron-heading">Auction House</h1>
+    <p class="lead text-muted">Purchase limited edition fine-art prints to help support game development. Each illustration will have 10 blockchain tracked prints. Prints will ship in late Summer 2018. Final print dimensions subject to quality and cost constraints. </p>
+    <p><a href="" ng-click="moveToUserInfo()">Click here if you purchased a print and need to enter your information.</a></p>
+    <p><a href="/history">Click here to see your card history including totems and prints</a></p>
+    <p class="lead text-muted">You can also purchase <a href="#promo-cards">founder's totems</a> if you want to start building your card collection (or you can <a href="/buy-packs">buy packs</a>).</p>
+  </div>
+</section>
+
+<div>
+  <div class="container">
+    <div class="row">
+      <div ng-repeat="card in artCardPrototypes" class="col-sm-12 col-md-6 col-lg-4 col-xl-3 card-wrapper">
+        <div ng-click="updateSelectedCard(card._id, 9000)" data-toggle="modal" data-target="#auctionModal" class="card hh">
+          <img class="card-img-top" src="images/owned/{{card._id}}.jpg" alt="card image">
+          <div class="card-body text-center">
+            <p class="title">{{card.title}}</p>
+            <p class="artist">by {{card.artist}}</p>
+            <p class="flavor-text align-middle">{{card.flavorText}}</p>
+          </div>
+          <div class="x row align-items-bottom">
+            <div class="col-6 col-l-8 col-xl-8 text-left">
+                <span class="float-left">Available: {{card.amount}}</span>
+            </div>
+            <div class="col-6 col-l-4 col-xl-4 text-right">
+                <span class="float-right">{{card.priceEth}}Ξ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="promo-cards" class="jumbotron text-center">
+    <div id="promo-explanation" class="container">
+      <h1 class="jumbotron-heading">Founder's Totems & Promo Cards</h1>
+      <p class="lead text-muted">Purchase founder's totems and promo cards here. Totems are normally only earned after completing a set, but early adopters can purchase them below to help support game deveopment.</p>
+      <p class="lead text-muted">The current promo cards are for the set <span class="makeBold">Merkle Pets on the Beach</span>, an unreleased set featuring cute beach critters. <span class="makeBold">Feel free to pick up a Vorp Crab for free!</span> Promo cards are special cards that will never be available through packs.</p>
+    </div>
+  </section>
+  <div class="container">
+    <div class="row">
+      <div ng-repeat="card in limitedCards | orderBy: '_id'" class="col-sm-12 col-md-6 col-lg-4 col-xl-3 card-wrapper">
+        <div ng-click="updateSelectedCard(card._id, card.cardSet)" data-toggle="modal" data-target="#auctionModal" class="card hh">
+          <img class="card-img-top" src="images/owned/{{card._id}}.jpg" alt="card image">
+          <div class="card-body text-center">
+            <p class="title">{{card.title}}</p>
+            <p class="artist">by {{card.artist}}</p>
+            <p class="flavor-text">{{card.flavorText}}</p>
+          </div>
+          <div class="x row align-items-bottom">
+            <div class="col-6 col-l-8 col-xl-8 text-left">
+                <span class="float-left">Available: {{card.amount}}</span>
+            </div>
+            <div class="col-6 col-l-4 col-xl-4 text-right">
+                <span class="float-right">{{card.priceEth}}Ξ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="auctionModal" tabindex="-1" role="dialog" aria-labelledby="auctionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content text-cener">
+        <div class="modal-body text-center">
+          <div ng-if="selectedCard.cardSet == 9000 || selectedCard.cardSet == 0">
+            <img class="img-responsive center-block" ng-src="images/owned/{{selectedCard._id}}.jpg" alt="Ethereum fine art print or totem image should be here">
+          </div>
+          <div ng-if="selectedCard.cardSet == 9999">
+            <img class="img-responsive center-block" style="min-width: 80%;" ng-src="images/cards/{{selectedCard._id}}.png" alt="Ethereum promo card image should be here">
+          </div>
+        </div>
+        <div class="modal-footer text-center">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="modal-card-title">{{selectedCard.title}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p>Artist: {{selectedCard.artist}}</p>
+              </div>
+            </div>
+            <div class="row" ng-if="selectedCard.cardSet == 9000">
+              <div class="col-md-12">
+                <p>This is a blockchain tracked <a href="about">fine art print</a>. Prints will ship in late Summer 2018.</p>
+                <p>Print sizes will be determined at the time of printing and are subject to cost and quality constraints.</p>
+                <p>There are <b>{{selectedCard.amount}}</b> prints left.
+              </div>
+            </div>
+            <div class="row" ng-if="selectedCard.cardSet == 0">
+              <div class="col-md-12" id="totem-buy-message">
+                <p ng-if="selectedCard._id == 1">This is a <a href="about">totem</a>. This totem will allow you to generate one common card from each common set.</p>
+                <p ng-if="selectedCard._id == 2">This is a <a href="about">totem</a>. This totem will allow you to generate one rare card from each rare set.</p>
+                <p ng-if="selectedCard._id == 3">This is a <a href="about">totem</a>. This totem will allow you to generate one epic card from each epic set.</p>
+                <p>There are <b>{{selectedCard.amount}}</b> totems left.</p>
+              </div>
+            </div>
+            <div class="row" ng-if="selectedCard.cardSet == 9999">
+              <div class="col-md-12" id="promo-buy-message">
+                <p>This is a <a href="about">promo card</a>.</p>
+                <p>Promo cards are limited edition cards only available during special events.</p>
+                <p>There are <b>{{selectedCard.amount}}</b> cards left.</p>
+              </div>
+            </div>
+            <div class="row" ng-if="selectedCard.cardSet == 9000">
+              <div class="col-md-12">
+                <button class="buy-card-button" ng-click="buyCard()">Purchase print ({{selectedCard.priceEth}}Ξ)</button>
+              </div>
+            </div>
+            <div class="row" ng-if="selectedCard.cardSet == 0">
+              <div class="col-md-12">
+                <button class="buy-card-button" ng-click="buyCard()">Purchase totem ({{selectedCard.priceEth}}Ξ)</button>
+              </div>
+            </div>
+            <div class="row" ng-if="selectedCard.cardSet == 9999">
+              <div class="col-md-12">
+                <button class="buy-card-button" ng-click="buyCard()">Purchase card ({{selectedCard.priceEth}}Ξ)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

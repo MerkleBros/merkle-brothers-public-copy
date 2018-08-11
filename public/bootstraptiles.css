@@ -1,0 +1,298 @@
+body {
+  /*Height 100% and margin-bottom 1px are used to force vertical scrollbar*/
+  background: #EAFFE3 !important;
+  height: 100%;
+  margin-bottom: 1px;
+}
+
+.nav a:visited, .nav a:link{
+    text-decoration: none;
+    color: white;
+}
+.nav a:hover {
+  color: #feffa0;
+}
+.nav #active-link{
+  text-decoration: underline;
+  color: #00ADC4;  
+}
+.nav #active-link a:visited, .nav #active-link a:link{
+  color: white;
+}
+.nav-element {
+  padding: 10px;
+  text-align: left;
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-title {
+  font-size: 23px;
+  text-align: center;
+}
+.app-auction-house {
+  display: grid;
+  height: auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+}
+.nav {
+  display: grid;
+  height: auto;
+  grid-template-columns: auto auto auto auto auto auto;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  grid-auto-flow: column;
+  border-bottom: 2px solid #1B3280;
+  background: #990000;
+}
+
+:root {
+  --jumbotron-padding-y: 0.8rem;
+}
+
+.jumbotron {
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: #EAFFE3 
+}
+@media (min-width: 600px) {
+  .modal-dialog {
+    max-width: 400px;
+  }
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: calc(var(--jumbotron-padding-y) * 2);
+    padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+img {
+  max-width: 100%;
+  min-width: 100%;
+}
+.card-body {
+  padding: 10px;
+  background: #990000;
+  color: white;
+  padding-bottom: 0px;
+}
+.card-body p {
+  line-height: 1.4rem !important;
+  margin: 0;
+}
+.title {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+}
+
+.artist {
+  margin: 0;
+}
+.flavor-text {
+  font-style: italic;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.card:hover {
+  opacity: 0.7;
+}
+.card-wrapper{
+  padding: 20px;
+  height: 400px;
+}
+#card-amount, #card-price {
+  background: #990000;
+  color: white;
+}
+.x {
+  background: #990000;
+  color: white;
+  margin: 0 0 0 0;
+}
+
+.buy-card-button {
+  background: #990000;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-color: black;
+  border-radius: 4px;
+}
+.buy-card-button:hover{
+  opacity: 0.5;
+}
+.modal-body {
+  background-color: black;
+  padding: 0px;
+  border: none;
+}
+
+.modal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+}
+
+.modal-card-title{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-footer {
+  text-align: center;
+  font-size: 1rem;
+  line-height: auto;
+  color: white;
+  background-color: black;
+  border: 0px;
+}
+.modal a {
+  color: #ff2c2c;;
+}
+
+.enter-user-info {
+  padding: 15px;
+}
+#merkle-bros-icon {
+  float: left;
+  min-width: 110px;
+}
+.thanks-message {
+  color: white;
+  background-color: black;
+  padding-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 1rem;
+}
+
+#submit-user-info-button {
+  color: white;
+  background-color: #990000;
+  border-color: black;
+}
+#submit-user-info-button:hover {
+  color: white;
+  background-color: #990000;
+  opacity: 0.7;
+}
+
+.hh {
+  height: 100% !important;
+}
+
+#prints-explanation {
+  color: white;
+  background-color: #990000;
+  padding: 20px;
+  border: 5px solid black;
+}
+
+#prints-explanation p {
+  color: white;
+}
+
+#prints-explanation a {
+  color: #faff5f;
+  font-weight: 600;
+}
+
+#promo-explanation a {
+  color: #faff5f;
+  font-weight: 600;
+}
+
+#promo-explanation {
+  color: white;
+  background-color: #990000;
+  padding: 20px;
+  border: 5px solid black;
+}
+
+#promo-explanation p {
+  color: white;
+}
+.text-muted {
+  color: white !important;
+}
+
+.makeBold {
+  font-weight: 600;
+}
+
+
+@media (max-width: 1200px) {
+  .card-wrapper {
+    height: 420px;
+  }
+}
+@media (max-width: 990px) {
+  .card-wrapper {
+    height: 440px;
+  }
+}
+@media (max-width: 768px) {
+  .hh {
+    height: auto !important;
+  }
+  .nav {
+  display: grid;
+  height: auto;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(6, auto);
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  }
+  .nav-element{
+    text-align: center;
+    color: white;
+    background: #990000;
+    border: 2px solid white;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+  .nav, .nav-element{
+    display: block;
+  }
+  .card-wrapper {
+    height: auto;
+  }
+  .container {
+    max-width: 100%;
+  }
+  .card {
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  .modal-dialog {
+    width: 80%;
+  }
+  .modal-body {
+    display: none;
+  }
+}

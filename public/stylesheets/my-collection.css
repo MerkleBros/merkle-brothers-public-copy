@@ -1,0 +1,308 @@
+html { overflow-y: scroll; }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #EAFFE3;
+  margin: 0;
+  font-family: Arial;
+}
+.nav a:visited, a:link{
+    text-decoration: none;
+    color: white;
+}
+.nav a:hover {
+  color: #feffa0;
+}
+.nav a:active {
+  text-decoration: underline;
+  color: white;
+}
+#active-link{
+  text-decoration: underline;
+  color: white;  
+}
+#active-link a:visited, a:link{
+  color: white;;
+}
+.nav-element {
+  padding: 10px;
+  text-align: left;
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-title {
+  font-size: 23px;
+  text-align: center;
+}
+.app-my-collection {
+  display: grid;
+  height: auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-auto-flow: row;
+}
+.nav {
+  display: grid;
+  height: auto;
+  grid-template-columns: auto auto auto auto auto auto;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  grid-auto-flow: column;
+  border-bottom: 2px solid #1B3280;
+  background: #990000;
+}
+.my-collection{
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-areas: 
+  "lo t ro"
+  "lo sub-nav ro"
+  "lo c ro"
+  "lo use ro";
+  padding: 40px;
+}
+.lo{
+  display: grid;
+  grid-area: lo;
+}
+.ro{
+  display: grid;
+  grid-area: ro;
+}
+.t{
+  display: grid;
+  grid-area: t;
+  font-size: 34px;
+  border-bottom: 2px solid #990000;
+  padding-top: 10px; 
+  padding-bottom: 5px; 
+}
+#user-address {
+  font-size: 15px;
+  color: #990000;
+}
+.c{
+  display: grid;
+  grid-area: c;
+}
+
+.switch-set button{
+  background-color: #990000;
+  color: black;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-color: black;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+:focus {outline:none;}
+
+#common {
+  background: #C6E6BE;
+}
+#rare{
+  background: #EDB9BF;
+}
+#epic{
+  background: #EDC2ED;
+}
+#legendary{
+  background: #B7C7ED;
+}
+#promo{
+  background: #ECEDC2;
+}
+#switch-description{
+  font-size: 20px;
+}
+.sub-nav{
+  display: grid;
+  grid-template-rows: auto auto;
+  padding-top: 10px;
+}
+.set {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+
+}
+.switch-set {
+  margin-bottom: 15px;
+}
+.st {
+  font-size: 22px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  border: 3px solid black;
+  background-color: black;
+}
+.card {
+  border: 2px solid black;
+}
+.card img{
+  width: 100%;
+}
+.totem img{
+  width: 100%;
+}
+.totem {
+  align-content: center;
+  align-self: center;
+  justify-content; center;
+  padding: 5px;
+}
+.totem-wrapper {
+  background-color: #990000;
+  border: solid 5px black;
+  color: white;
+}
+#totem-title{
+  text-align: center;
+  font-size: 22px;
+}
+.no-card{
+  font-size: 62px;
+  background: lightgray;
+  width: 100%;
+  text-align: center;
+  height: 80%;
+  align-self: center;
+  justify-self: center;
+}
+.use-totem{
+  display: grid;
+  grid-area: use;
+}
+
+/*Image hover effect*/
+.shadow-filter {
+  
+}.shadow-filter:hover {
+  opacity: 0.7;
+}
+.shadow-filter2:hover{
+  opacity: 0.7;
+}
+
+.modal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+}
+.modal-content {
+  color: white;
+  background-color: black;
+}
+.modal-card-title{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.modal-card-set{
+  font-size: 2rem;
+  text-align: center;
+}
+
+.modal-footer {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 15px;
+  border: none;
+}
+modal-footer p {
+  line-height: 15px;
+}
+.modal-top {
+  line-height: 10px;
+  font-size: 2rem;
+}
+.totem-use-button {
+  background: #990000;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-color: black;
+  border-radius: 4px;
+  height: 100px;
+  width: 100%;
+  line-height: 1.2em;
+}
+.totem-use-button:hover{
+  opacity: 0.5;
+}
+.set-used-button {
+  background: #727475;
+  color: white;
+}
+.set-used-button:hover {
+  opacity: 1;
+}
+
+#set-select {
+  background: #990000;
+  color: white;
+  border: 5px solid black;
+  height: 40px;
+}
+#set-select:hover {
+  opacity: 0.7;
+}
+
+#set-title {
+  font-size: 1.5em;
+  background-color: #990000;
+  color: white;
+  padding: 5px;
+  border: solid 5px black;
+}
+#totem-select {
+  background: #990000;
+  color: white;
+  padding: 2px;
+}
+
+#totem-buttons-div .col-md-4 {
+  padding-right: 1px;
+  padding-left: 1px;
+}
+
+.totem-modal-selected {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -45%) !important;
+}
+
+#claim-totem-message {
+  color: #ff5555;
+  line-height: 1.3em;
+}
+
+@media (max-width: 600px) {
+  .nav-app, .nav, .nav-element{
+    display: block;
+  }
+  .nav-element{
+    text-align: center;
+    color: white;
+    background: #990000;
+    border: 2px solid white;
+    margin: 0px;
+  }
+  #set-title {
+    font-size: 3.5vw;
+  }
+
+}

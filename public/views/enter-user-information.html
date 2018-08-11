@@ -1,0 +1,43 @@
+<div class="enter-user-info container">
+	<div class="row thanks-message">
+		<div class="col-sm-12 thanks-message-content">
+			<p><img class="img-responsive" id="merkle-bros-icon" src="images/merkle-bros-icon.png">Hey there! Thanks for purchasing a Merkle Brother's fine art print! Please provide your name, email, and mailing address below so we know where to ship your print.</p>
+			<p>Metamask should prompt you to sign a message when this page loads. This is a secure way to ensure that you are the owner of this Ethereum account, and that the information submitted in the form below is really from you and not an impersonator.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<p>Enter user information for account#: {{account}}</p>
+			<p>If you used a different account to purchase a print, switch to that account and reload this page.</p>
+		</div>
+	</div>
+	<div class="row" ng-class="{{authenticated && 'auth-help' || 'no-auth-help'}}">
+		<div class="col-sm-12" >
+			<p ng-style="{'background-color': helpMessageColor}" id="auth-help">{{userInfoHelpMessage}}</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<form>
+			  <div class="form-group">
+			    <label for="inputEmail">Email address</label>
+			    <input ng-model="user.email" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter an email address">
+			    <small id="emailHelp" class="form-text text-muted">We'll send out an email when our first print run is complete.</small>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputName">Name</label>
+			    <input ng-model="user.name" type="name" class="form-control" id="inputName" placeholder="Enter your name">
+			  </div>
+			  <div class="form-group">
+			    <label for="addressTextArea">Mailing Address</label>
+			    <textarea ng-model="user.mailingAddress" class="form-control" id="addressTextArea" rows="4" placeholder="Enter your complete mailing address"></textarea>
+			  </div>
+			  <div class="form-check" style="padding-bottom: 5px">
+			    <input ng-model="user.sendPromoEmails" type="checkbox" class="form-check-input" id="extraMailCheck" value="false">
+			    <label class="form-check-label" for="extraMailCheck">Send me emails about project updates and promotional giveaways.</label>
+			  </div>
+			  <button type="submit" ng-click="submitUserInfo()" id="submit-user-info-button" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
